@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    background-color: #1EC4DC;
+    text-align: center;
+    justify-content: center;
+    font-size: small;
+  }
+  .txt{
+    color: blanchedalmond;
+    font-size: 15px;
+  }
+
+  
