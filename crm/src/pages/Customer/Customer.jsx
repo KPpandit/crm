@@ -182,28 +182,48 @@ const Customer = (props) => {
 
                                     <Grid item xs={12}>
                                         <Grid container>
-                                            <Grid item xs={8} sx={{ paddingLeft: 1 }}>
-                                                <Grid container spacing={1} >
-
-                                                    <Grid item xs={4} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'left' }}>
-                                                        Name :
-                                                    </Grid>
-                                                    <Grid item xs={8}>
-                                                        {selectedRecord.firstName} {selectedRecord.lastName}
-                                                    </Grid>
-                                                    <Grid item xs={4} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'left' }}>
+                                            <Grid item xs={8} >
+                                                <Grid container spacing={1.5} >
+                                                    <Grid item xs={3} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'right' }}>
                                                         Title :
                                                     </Grid>
                                                     <Grid item xs={8}>
                                                         {selectedRecord.personTitle}
                                                     </Grid>
-                                                    <Grid item xs={4} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'left' }}>
-                                                        Gender :
+                                                    <Grid item xs={3.7} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'right' }}>
+                                                        Name :
                                                     </Grid>
                                                     <Grid item xs={8}>
-                                                        {selectedRecord.gender}
+                                                        {selectedRecord.firstName} {selectedRecord.lastName}
                                                     </Grid>
 
+                                                    <Grid item xs={4.2} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'right' }}>
+                                                        Gender :
+                                                    </Grid>
+                                                    <Grid item xs={7}>
+                                                    <Typography sx={{ textAlign: 'left' }}>
+                                                    {selectedRecord.gender}
+                                                        </Typography>
+                                                       
+                                                    </Grid>
+                                                    <Grid item xs={6.4} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'right' }}>
+                                                        EKYC Status :
+                                                    </Grid>
+                                                    <Grid item xs={5} sx={{ textAlign: 'left' }}>
+                                                        <Typography sx={{ textAlign: 'left' }}>
+                                                            {selectedRecord.ekycStatus}
+                                                        </Typography>
+                                                    </Grid>
+                                                    
+                                                    <Grid item xs={3.6} sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'right' }}>
+                                                    Email :
+                                                    </Grid>
+                                                    <Grid item xs={8} sx={{ textAlign: 'left' }}>
+                                                        <Typography sx={{ textAlign: 'left' }}  gutterBottom >
+                                                        {selectedRecord.email}
+                                                        </Typography>
+                                                    </Grid>
+                                                    <Divider light />
 
                                                 </Grid>
                                             </Grid>
@@ -218,7 +238,7 @@ const Customer = (props) => {
                                                                 maxWidth: '100%',
                                                                 maxHeight: '200px',
                                                                 paddingBottom: '0px',
-                                                                border: '5px solid Grey', // Set border style, adjust color and width as needed
+                                                                border: '5px solid grey', // Set border style, adjust color and width as needed
                                                                 borderRadius: '15px', // Optional: Add border-radius for rounded corners
                                                             }}
                                                         />
@@ -235,73 +255,8 @@ const Customer = (props) => {
 
                                     </Grid>
 
-                                    {/* <Grid container padding={1}>
-                                        <Grid item xs={4}>
-                                            <Typography sx={{ fontWeight: '480', fontSize: '17px', textAlign: 'left' }}>  Name :</Typography>
-                                        </Grid>
-                                        <Grid item xs={8} alignItems={'left'} sx={{ marginLeft: -6 }}>
-                                            <Typography
-                                                sx={{ fontSize: '17px', textAlign: 'left' }}
-                                                gutterBottom variant="body2">
-                                                {selectedRecord.firstName} {selectedRecord.lastName}
-                                            </Typography>
-                                        </Grid>
-                                    </Grid> */}
-
-
-                                    {/* <Divider />
-
-                                    <Grid container padding={1}>
-                                        <Grid item xs={6}>
-                                            <Typography sx={{ fontWeight: '500', fontSize: '17px', textAlign: 'left' }}>
-                                                Title :
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={6} alignItems={'left'} sx={{ marginLeft: -12 }}>
-                                            <Typography
-                                                sx={{ fontSize: '17px', textAlign: 'left' }}
-                                                gutterBottom variant="body2">
-                                                {selectedRecord.personTitle}
-                                            </Typography>
-                                        </Grid>
-                                    </Grid> */}
-
-                                    {/* <Divider light />
-
-                                    <Box sx={{ p: 1 }}>
-                                        <Grid container>
-                                            <Grid item xs={6}>
-                                                <Typography sx={{ fontWeight: '500', fontSize: '17px', textAlign: 'left' }}>
-                                                    Gender :
-                                                </Typography>
-                                            </Grid>
-                                            <Grid item xs={6} alignItems={'left'} sx={{ marginLeft: -12 }}>
-                                                <Typography
-                                                    sx={{ fontSize: '17px', textAlign: 'left' }}
-                                                    gutterBottom variant="body2">
-                                                    {selectedRecord.gender}
-                                                </Typography>
-                                            </Grid>
-                                        </Grid>
-                                    </Box>
-                                    <Divider light /> */}
-                                    <Divider light />
-                                    <Box sx={{ p: 1 }}>
-                                        <Grid container>
-                                            <Grid item xs={6}>
-                                                <Typography sx={{ fontWeight: '500', fontSize: '17px', textAlign: 'left' }}>
-                                                    Email :
-                                                </Typography>
-                                            </Grid>
-                                            <Grid item xs={6} alignItems={'left'} sx={{ marginLeft: -13 }}>
-                                                <Typography
-                                                    sx={{ fontSize: '17px', textAlign: 'left' }}
-                                                    gutterBottom variant="body2">
-                                                    {selectedRecord.email}
-                                                </Typography>
-                                            </Grid>
-                                        </Grid>
-                                    </Box>
+                                   
+                                    
                                     <Divider light />
 
                                     <Box sx={{ p: 1 }}>

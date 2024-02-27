@@ -237,7 +237,7 @@ export default function AvailablePlan() {
                                                                     <Typography>Validity</Typography>
                                                                 </Grid>
                                                                 <Grid item xs={12}>
-                                                                    {/* <Typography>{plan.rates_offer.match(/(\d+)\s*days/)[0]}</Typography> */}
+                                                                    <Typography>{plan.rates_offer.match(/(\d+)\s*days/)[0]}</Typography>
                                                                 </Grid>
                                                             </Grid>
                                                         </Grid>

@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from "axios";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 export default function Category() {
     const columns = [
         { id: 'name', name: 'Name' },
@@ -12,36 +15,7 @@ export default function Category() {
     const [rows, setRows] = useState([]);
     const tokenValue = localStorage.getItem('token');
     // Generate sample data
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('http://172.5.10.2:9696/api/category/detail/get/all', {
-                    headers: {
-                        Authorization: `Bearer ${tokenValue}`,
-                        "Accept": "application/json",
-                        "Content-Type": "application/json"
-                    }
-                });
-                // Assuming your API response is an array of objects similar to the data structure in your generateData function
-                const apiData = response.data;
-
-                // Update the state with the API data
-                setRows(apiData);
-            } catch (error) {
-
-                if (error.response && error.response.status === 401) {
-                    // console.log("From inside if condition");
-                    // localStorage.removeItem('token');
-                    // navigate("/");
-                }
-
-                console.error('Error fetching data from API:', error);
-                // Handle error as needed
-            }
-        };
-
-        fetchData(); // Invoke the fetchData function when the component mounts
-    }, [tokenValue]);
+  
     const handleConfirmDelete = () => {
         // Perform the delete operation here using the recordIdToDelete
         // After successful deletion, you can update the UI accordingly
@@ -71,22 +45,7 @@ export default function Category() {
         // Close the confirmation dialog
         setConfirmationDialogOpen(false);
     };
-    const fetchData = async () => {
-        try {
-            const response = await axios.get('http://172.5.10.2:9090/api/customers', {
-                headers: {
-                    Authorization: `Bearer ${tokenValue}`,
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-            });
-            setRows(response.data);
-        } catch (error) {
-            console.log("response from Error");
-
-            console.error('Error fetching data from API:', error);
-        }
-    };
+   
     // const [rows, rowchange] = useState(generateData());
     const [page, pagechange] = useState(0);
     const [rowperpage, rowperpagechange] = useState(5);
@@ -137,24 +96,64 @@ export default function Category() {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
                 },
-            });
+            }).then(res => {
+                console.log(res.status + "status code ")
+                if (res.status === 200) {
+                    
+                    setAddDialogOpen(false);
+                    
+                    toast.success('Category Added Successfully', { autoClose: 2000 });
+                }
+                // location.reload();
+            })
 
             // Handle success, you can update the UI or take other actions
             console.log('New record saved successfully:', response.data);
 
             // Fetch updated data after successful addition
-            fetchData();
+          
             e.preventDefault();
             // Close the add popup
-            setAddDialogOpen(false);
+           
         } catch (error) {
             // Handle error, you can display an error message or take other actions
-            console.error('Error saving new record:', error);
+            toast.error(error.response.data.message, { autoClose: 2000 });
+
             
 
         }
     };
+    //
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://172.5.10.2:9696/api/category/detail/get/all', {
+                    headers: {
+                        Authorization: `Bearer ${tokenValue}`,
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    }
+                });
+                // Assuming your API response is an array of objects similar to the data structure in your generateData function
+                const apiData = response.data;
 
+                // Update the state with the API data
+                setRows(apiData);
+            } catch (error) {
+
+                if (error.response && error.response.status === 401) {
+                    // console.log("From inside if condition");
+                    // localStorage.removeItem('token');
+                    // navigate("/");
+                }
+
+                console.error('Error fetching data from API:', error);
+                // Handle error as needed
+            }
+        };
+
+        fetchData(); // Invoke the fetchData function when the component mounts
+    }, [tokenValue,setAddDialogOpen]);
     const SelectedRecordDetails = () => {
         const [editDialogOpen, setEditDialogOpen] = useState(false);
         const [editRecord, setEditRecord] = useState(null);
@@ -174,7 +173,7 @@ export default function Category() {
                 <Grid>
                     <Paper elevation={10}>
 
-
+                  
                         <Card variant="outlined" sx={{ fontFamily: "Roboto" }}>
 
                             <Box sx={{ p: 1 }}>
@@ -317,7 +316,7 @@ export default function Category() {
     };
     return (
         <Box sx={{ display: 'container', marginTop: -2.5, width: '78vw' }}>
-
+  <ToastContainer position="bottom-left" />
             <Box sx={{ width: '70%', }}>
                 <Box component="main" sx={{ flexGrow: 1, p: 1, width: '100%' }}>
                     <Paper elevation={10} sx={{ padding: 1, margin: 1, backgroundColor: 'white', color: '#253A7D', marginLeft: -0.8, marginRight: 1 }}>

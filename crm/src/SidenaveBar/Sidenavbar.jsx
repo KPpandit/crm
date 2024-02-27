@@ -445,12 +445,12 @@ export default function Sidenavbar() {
 
             
             <Grid item sx={{ marginRight: 2, marginLeft: 'auto', marginTop: -0.5 }}>
-              <Button>
-              <Typography sx={{ color: 'white', paddingRight:1.5}}>Logout</Typography>
-              <LogoutIcon style={{ color: 'white' }} onClick={(e) => {
+              <Button onClick={(e) => {
                 localStorage.removeItem('token');
                 navigate("/")
-              }} />
+              }}>
+              <Typography sx={{ color: 'white', paddingRight:1.5}}>Logout</Typography>
+              <LogoutIcon style={{ color: 'white' }}  />
               </Button>
             </Grid>
           </Grid>
