@@ -8,7 +8,7 @@ export default function PrePaidAccount(){
         { id: 'msisdn', name: 'MISIDN' },
         { id: 'imsi', name: 'IMSI' },
         { id: '4g_data_octets', name: '4 G Octets' },
-        { id: '5g_data_octets', name: '5 G Octets' },
+        { id: '5g_data_octets', name: '5 G Octetss' },
         
 
     ];
