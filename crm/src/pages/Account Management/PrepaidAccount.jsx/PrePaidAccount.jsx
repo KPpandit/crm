@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import axios from "axios";
 export default function PrePaidAccount(){
     const columns = [
-        { id: 'msisdn', name: 'MISIDNs' },
+        { id: 'msisdn', name: 'MISIDN' },
         { id: 'imsi', name: 'IMSI' },
         { id: '4g_data_octets', name: '4 G Octets' },
         { id: '5g_data_octets', name: '5 G Octets' },
