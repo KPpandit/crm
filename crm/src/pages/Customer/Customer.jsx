@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from "axios";
-
+import blanPhoto from '../../assets/blanPhoto.png'
 
 const Customer = (props) => {
     const columns = [
@@ -244,9 +244,20 @@ const Customer = (props) => {
                                                         />
                                                     </>
                                                 ) : (
-                                                    <Typography variant="body1" color="textSecondary">
-                                                        Photo Not Available
-                                                    </Typography>
+                                                    <>
+                                                        {/* <CancelIcon sx={{ position: 'absolute', top: 0, right: 0, cursor: 'pointer', color: '#1976D2' }} onClick={handleCancelPhoto} /> */}
+                                                        <img
+                                                            src={blanPhoto}
+                                                            alt="Selected"
+                                                            style={{
+                                                                maxWidth: '100%',
+                                                                maxHeight: '250px',
+                                                                paddingBottom: '0px',
+                                                                border: '5px solid grey', // Set border style, adjust color and width as needed
+                                                                borderRadius: '15px', // Optional: Add border-radius for rounded corners
+                                                            }}
+                                                        />
+                                                    </>
                                                 )}
                                             </Grid>
 

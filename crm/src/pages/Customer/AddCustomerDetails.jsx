@@ -548,58 +548,7 @@ export default function AddCustomerDetails() {
                                         />
                                     </Grid>
 
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
 
-                                            label="autoPaymentType"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="autoPaymentType"
-                                            value={values.autoPaymentType}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="dueDateUnitId"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="dueDateUnitId"
-                                            value={values.dueDateUnitId}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="dueDateValue"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="dueDateValue"
-                                            value={values.dueDateValue}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="dfFm"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="dfFm"
-                                            value={values.dfFm}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
                                     <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
                                         <FormControl fullWidth >
                                             <InputLabel id="demo-simple-select-label">IS Parent ?</InputLabel>
@@ -619,19 +568,7 @@ export default function AddCustomerDetails() {
                                             </Select>
                                         </FormControl>
                                     </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
 
-                                            label="excludeAging"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="excludeAging"
-                                            value={values.excludeAging}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
                                     <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
                                         <TextField
 
@@ -645,19 +582,7 @@ export default function AddCustomerDetails() {
                                             onBlur={handleBlur}
                                         />
                                     </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
 
-                                            label="dynamicBalance"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="dynamicBalance"
-                                            value={values.dynamicBalance}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
 
 
 
@@ -682,65 +607,7 @@ export default function AddCustomerDetails() {
                                             </Select>
                                         </FormControl>
                                     </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
 
-                                            label="nextInvoiceDayOfPeriod"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="nextInvoiceDayOfPeriod"
-                                            value={values.nextInvoiceDayOfPeriod}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="creditNotificationLimit1"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="creditNotificationLimit1"
-                                            value={values.creditNotificationLimit1}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="creditNotificationLimit2"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="creditNotificationLimit2"
-                                            value={values.creditNotificationLimit2}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-
-
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-                                            label="currentMonthlyAmount"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="currentMonthlyAmount"
-                                            value={values.currentMonthlyAmount}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            InputProps={{
-                                                inputProps: {
-                                                    inputMode: "numeric",
-                                                },
-                                            }}
-                                        />
-                                    </Grid>
                                 </Grid>
                             </Grid>
                             <Grid item lg={6}>
@@ -756,57 +623,8 @@ export default function AddCustomerDetails() {
                                         // onBlur={handleBlur}
                                         />
                                     </Grid>
+
                                     <Grid item lg={6} md={4} sm={6} xs={12} >
-                                        <TextField
-                                            label="creditLimit"
-                                            type="number"
-                                            value={values.creditLimit}
-                                            fullWidth
-                                            name="creditLimit"
-                                            required
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="Auto Recharge Amount"
-                                            type="number"
-                                            required
-                                            fullWidth
-                                            name="autoRecharge"
-                                            value={values.autoRecharge}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-                                            required
-                                            label="Auto-Recharge Threshold"
-                                            type="number"
-                                            fullWidth
-                                            name="rechargeThreshold"
-                                            value={values.rechargeThreshold}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
-                                        <TextField
-
-                                            label="Auto-Recharge Monthly Limit"
-                                            type="number"
-                                            name="monthlyLimit"
-                                            fullWidth
-                                            required
-                                            value={values.monthlyLimit}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </Grid>
-                                    <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
                                         <FormControl fullWidth >
                                             <InputLabel id="demo-simple-select-label">Invoice Delivery Method</InputLabel>
                                             <Select
@@ -828,7 +646,7 @@ export default function AddCustomerDetails() {
                                     </Grid>
 
 
-                                    <Grid item lg={12} md={4} sm={6} xs={12} paddingBottom={2}>
+                                    <Grid item lg={12} md={4} sm={6} xs={12} >
                                         {accountType === 'Post-Paid' && (
                                             <Grid container spacing={2}>
                                                 <Grid item lg={6} md={4} sm={6} xs={12} fullWidth paddingBottom={2}>
@@ -846,6 +664,8 @@ export default function AddCustomerDetails() {
                                                 </Grid>
                                                 <Grid item lg={6} md={4} sm={6} xs={12} fullWidth paddingBottom={2}>
                                                     <Grid container spacing={0} alignItems="center">
+                                                       <Grid item xs={12}>
+                                                        <Grid container spacing={1}>
                                                         <Grid item xs={8}>
                                                             {/* Left side for text input */}
                                                             <TextField
@@ -855,17 +675,19 @@ export default function AddCustomerDetails() {
                                                                 // value={values.creditLimit}
                                                                 // onChange={handleChange}
                                                                 // onBlur={handleBlur}
-                                                                sx={{ width: 175 }}
+                                                               
                                                             />
                                                         </Grid>
                                                         <Grid item xs={4}>
                                                             {/* Right side for dropdown */}
                                                             <Select
+                                                             
                                                                 // value={values.selectedOption}
                                                                 // onChange={handleChange}
                                                                 // name="selectedOption"
+                                                                fullWidth
                                                                 displayEmpty
-                                                                sx={{ width: 90 }}
+                                                                
                                                             >
                                                                 <MenuItem value={'month'}>Month</MenuItem>
                                                                 <MenuItem value={'week'}>Week</MenuItem>
@@ -874,8 +696,197 @@ export default function AddCustomerDetails() {
                                                                 <MenuItem value={'semi-month'}>Semi-Month</MenuItem>
                                                             </Select>
                                                         </Grid>
+                                                            </Grid>
+                                                        </Grid>
 
                                                     </Grid>
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} >
+                                                    <TextField
+                                                        label="creditLimit"
+                                                        type="number"
+                                                        value={values.creditLimit}
+                                                        fullWidth
+                                                        name="creditLimit"
+                                                        required
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="Auto Recharge Amount"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="autoRecharge"
+                                                        value={values.autoRecharge}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+                                                        required
+                                                        label="Auto-Recharge Threshold"
+                                                        type="number"
+                                                        fullWidth
+                                                        name="rechargeThreshold"
+                                                        value={values.rechargeThreshold}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="Auto-Recharge Monthly Limit"
+                                                        type="number"
+                                                        name="monthlyLimit"
+                                                        fullWidth
+                                                        required
+                                                        value={values.monthlyLimit}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="autoPaymentType"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="autoPaymentType"
+                                                        value={values.autoPaymentType}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="dueDateUnitId"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="dueDateUnitId"
+                                                        value={values.dueDateUnitId}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="dueDateValue"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="dueDateValue"
+                                                        value={values.dueDateValue}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="dfFm"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="dfFm"
+                                                        value={values.dfFm}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="nextInvoiceDayOfPeriod"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="nextInvoiceDayOfPeriod"
+                                                        value={values.nextInvoiceDayOfPeriod}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="creditNotificationLimit1"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="creditNotificationLimit1"
+                                                        value={values.creditNotificationLimit1}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="creditNotificationLimit2"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="creditNotificationLimit2"
+                                                        value={values.creditNotificationLimit2}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+
+
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+                                                        label="currentMonthlyAmount"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="currentMonthlyAmount"
+                                                        value={values.currentMonthlyAmount}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                        InputProps={{
+                                                            inputProps: {
+                                                                inputMode: "numeric",
+                                                            },
+                                                        }}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="excludeAging"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="excludeAging"
+                                                        value={values.excludeAging}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
+                                                </Grid>
+                                                <Grid item lg={6} md={4} sm={6} xs={12} paddingBottom={2}>
+                                                    <TextField
+
+                                                        label="dynamicBalance"
+                                                        type="number"
+                                                        required
+                                                        fullWidth
+                                                        name="dynamicBalance"
+                                                        value={values.dynamicBalance}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                    />
                                                 </Grid>
 
                                             </Grid>
